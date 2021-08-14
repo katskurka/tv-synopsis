@@ -3,16 +3,16 @@ html
     link(rel="stylesheet" href="/style.css")
   body
     h1= showdata.title
-    h2 Developed By
+    h2(class='dev') Developed By
       ul 
       for developer in showdata.developedBy
-        li= developer
-    h2 Starring
+        li(class='devlist')= developer
+    h2(class='stars') Starring
       ul
       for actors in showdata.starring
-        li= actors
-    h2 Seasons
+        li(class='actorlist')= actors
+    h2(class='seasons') Seasons
       ul
       for season in showdata.seasons
-        li
+        li(class='seasonlist')
           a(href="/seasons/" + season.number) Season #{season.number}

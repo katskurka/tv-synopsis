@@ -4,6 +4,7 @@ body {
 h1 {
   color: maroon;
   font-size: 3em;
+  text-align: center;
 }
 
 h2 {
@@ -54,3 +55,35 @@ td {
   text-align: center;
 }
 
+.dev {
+  color: darkred;
+  text-align: left;
+  padding: 20px;
+}
+
+.stars {
+  color: darkred;
+  text-align: left;
+  padding: 20px;
+}
+
+.actorlist {
+  color: black;
+  text-align: left;
+}
+.devlist {
+  text-align: left;
+  color: black;
+
+}
+
+.seasons {
+  padding: 20px;
+  color: darkred;
+  text-align: left;
+}
+
+.seasonlist {
+  color: black;
+  text-align: left;
+}
