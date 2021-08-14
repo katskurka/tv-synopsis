@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 
-const showData = require('./showdata')
+const showdata = require('./showdata')
 
 // setup port
 app.listen(1337, () => {
@@ -15,14 +15,14 @@ app.use(express.static('public'))
 
 // setting up home
 app.get('/', (req, res) => {
-  res.render('index', { showData })
+  res.render('index', { showdata })
 })
 
 // getting seasons
 app.get('/seasons/:id', (req, res) => {
-  const showSeason = showData.seasons.filter(season => season.number === parseInt(req.params.id))
+  const showSeason = showdata.seasons.filter(season => season.number === parseInt(req.params.id))
 
-  return res.render('seasons', { showSeason })
+  res.render('seasons', { showSeason })
 })
 
 app.all('*', (req, res) => {
