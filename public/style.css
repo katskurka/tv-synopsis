@@ -18,6 +18,7 @@ table {
   margin: auto;
   display: flex;
   border-collapse: collapse;
+  width: 70%
 }
 
 th {
