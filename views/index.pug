@@ -1,0 +1,18 @@
+html
+  head 
+    link(rel="stylesheet" href="/style.css")
+  body
+    h1= showdata.title
+    h2(class='dev') Developed By
+      ul 
+      for developer in showdata.developedBy
+        li(class='devlist')= developer
+    h2(class='stars') Starring
+      ul
+      for actors in showdata.starring
+        li(class='actorlist')= actors
+    h2(class='seasons') Seasons
+      ul
+      for season in showdata.seasons
+        li(class='seasonlist')
+          a(href="/seasons/" + season.number) Season #{season.number}

@@ -1,0 +1,19 @@
+html
+  head 
+    link(rel="stylesheet" href="/style.css")
+  body
+  center
+    h1 Kim's Convenience
+    h2= 'Season ' + showSeason[0].number
+    table
+      tr
+        th(class='headnum') No.
+        th(class='headtitle') Title
+        th(class='headdirector') Director
+        for episode in showSeason[0].episodes 
+          tr
+            td(class='number')= episode.number 
+            td(class='title')= episode.title 
+            td(class='director')= episode.director 
+          tr
+            td(colspan=3 class='synopsis')= episode.synopsis
